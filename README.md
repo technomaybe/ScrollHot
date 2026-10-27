@@ -4,6 +4,8 @@ A tiny macOS menu-bar app that remaps a **click of the scroll-wheel button** (th
 
 Press the scroll wheel in → ScrollHot fires the shortcut you assigned. That's the whole app.
 
+<img src="docs/menu.png" alt="The ScrollHot menu open in the macOS menu bar, with the shortcut set to Control-Command-4" width="320">
+
 > ScrollHot is the version 2 rebuild of **MouseyHot**. The original tried to remap several mouse buttons and gestures, which caused bugs on the Magic Mouse and trackpad. This rewrite does one thing only — the scroll-wheel click — which makes it small, predictable, and reliable.
 
 ---
@@ -29,12 +31,18 @@ ScrollHot narrows the scope to a single, well-defined hardware event: `otherMous
 - A mouse with a clickable scroll wheel (the middle button)
 - Xcode 15+ to build from source
 
-## Install / Build
+## Install
 
-ScrollHot is not code-signed for distribution, so build it yourself:
+### Download
+
+Grab `ScrollHot-1.0.zip` from the [latest release](https://github.com/technomaybe/ScrollHot/releases/latest), unzip it, and drag **ScrollHot.app** into `/Applications`. It runs on Apple silicon and Intel Macs.
+
+ScrollHot isn't signed with an Apple Developer ID or notarized, so macOS will block it the first time. Try to launch it once, then go to System Settings → Privacy & Security and click **Open Anyway**.
+
+### Build from source
 
 ```bash
-git clone https://github.com/<your-username>/ScrollHot.git
+git clone https://github.com/technomaybe/ScrollHot.git
 cd ScrollHot
 open ScrollHot.xcodeproj
 ```
